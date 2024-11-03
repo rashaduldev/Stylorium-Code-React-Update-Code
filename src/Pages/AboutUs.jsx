@@ -9,22 +9,34 @@ const AboutUs = () => {
       {/* Main content with padding to avoid overlapping with the fixed Nav */}
       <div className="mt-20 md:py-12">
         {/* Header */}
-        <div className="text-left mb-8 bg-slate-200 p-10">
+        <div className="text-left mb-8 bg-slate-100 p-10 container mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold">About Us</h2>
           <p className="text-gray-600 mt-2">Home / About Us</p>
         </div>
 
         {/* Image and About Section */}
-        <div className="md:flex md:space-x-8 container mx-auto">
-          <div className="flex-shrink-0">
+        <div className="md:flex space-x-8 container mx-auto">
+          <div className="flex-1">
             <img
               src="https://via.placeholder.com/600x400" // Replace with your image URL
               alt="About our shop"
-              className="rounded-md"
+              className="rounded-md w-full h-[80%]"
             />
           </div>
-          <div className="mt-4 md:mt-0">
-            <h3 className="text-2xl font-semibold">About Our Shop</h3>
+          <div className="mt-4 md:mt-0 flex-1">
+            <h3 className="text-2xl font-semibold mt-5">About Our Shop</h3>
+            <p className="mt-4 text-gray-700">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis enim, 
+              accumsan pulvinar sit ac, eu nunc. Ut accumsan quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+            <p className="mt-4 text-gray-700">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis enim, 
+              accumsan pulvinar sit ac, eu nunc. Ut accumsan quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+            <p className="mt-4 text-gray-700">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis enim, 
+              accumsan pulvinar sit ac, eu nunc. Ut accumsan quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
             <p className="mt-4 text-gray-700">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis enim, 
               accumsan pulvinar sit ac, eu nunc. Ut accumsan quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -50,14 +62,14 @@ const AboutUs = () => {
 
         {/* Team Members Section */}
         <div className="mt-12">
-          <h4 className="text-2xl font-semibold text-center mb-6">Team Members</h4>
+          <h4 className="text-2xl font-semibold text-center mb-10 mt-10">Team Members</h4>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {['Jonathon Andrew', 'Adipisci Volit', 'John Fexit', 'John Fexit'].map((name, index) => (
               <div key={index} className="text-center">
                 <img
                   src="https://via.placeholder.com/150" // Replace with the team member's image URL
                   alt={name}
-                  className="w-24 h-24 mx-auto rounded-full object-cover"
+                  className="w-40 h-40 mx-auto rounded-full object-cover"
                 />
                 <p className="mt-4 font-medium">{name}</p>
                 <p className="text-sm text-gray-500">
