@@ -34,3 +34,22 @@
   top: 0;
   width: 100%;
 }
+
+/* CardGrid.css */
+
+.animated-image {
+  animation: upDown 1.5s ease-in-out infinite alternate;
+}
+
+.group:hover .animated-image {
+  animation-delay: 1.5s;
+}
+
+@keyframes upDown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}

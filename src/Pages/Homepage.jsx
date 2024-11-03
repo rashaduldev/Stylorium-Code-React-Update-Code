@@ -7,6 +7,9 @@ import Carousel from '../components/HomepageComponent/Carousel';
 import Timeline from '../components/HomepageComponent/Timeline';
 import VideoBackground from '../components/HomepageComponent/VideoBackground';
 import CardGrid from '../components/HomepageComponent/CardGrid';
+import BottomCarousel from '../components/HomepageComponent/BottomCarousel';
+import WorldMap from '../components/HomepageComponent/WorldMap';
+import ContactForm from '../components/HomepageComponent/ContactForm';
 
 const Homepage = () => {
   const [showTopNavbar, setShowTopNavbar] = useState(false);
@@ -34,6 +37,9 @@ const Homepage = () => {
       <Timeline/>
       <VideoBackground/>
       <CardGrid/>
+      <BottomCarousel/>
+      <WorldMap/>
+      <ContactForm/>
     </>
   );
 };
