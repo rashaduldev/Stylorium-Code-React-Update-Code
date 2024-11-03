@@ -10,13 +10,17 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="bg-slate-300 text-base-content relative">
+    <footer className="bg-slate-300 text-base-content relative mt-10">
       <button className="w-16 h-16 bg-white rounded-full border-2 border-black absolute left-[45%] bottom-[95%] md:left-[50%] md:bottom-[92%]">
         <FontAwesomeIcon icon={faAnglesUp} size="2xl" />
       </button>
       <div className="container mx-auto footer p-10">
         <nav className="">
-          <h6 className="footer-title">Stylorium Sourcing Ltd.</h6>
+        <div >
+          <img className="w-16 h-14 ml-10"   src="https://i.ibb.co.com/n8mynVc/logo.jpg" alt="" />
+        <p className='text-sm italic pt-1 font-bold'>100% ExportOriented</p>
+        </div>
+          <h6 className="text-lg font-bold text-black">Stylorium Sourcing Ltd.</h6>
           <a className="link link-hover">Corporate Headquarters</a>
           <div className="w-4/6">
             <FontAwesomeIcon icon={faHouseChimney} />
@@ -44,7 +48,8 @@ const Footer = () => {
         </nav>
         {/* mIddle */}
         <nav>
-          <h6 className="footer-title">India Office</h6>
+          {/* <h6 className="footer-title"></h6> */}
+          <a className="link link-hover ml-2 md:mt-16">India Office</a>
           <div className="flex gap-2 w-4/6">
             <FontAwesomeIcon icon={faHouseChimney} />
             <span className="">
@@ -62,7 +67,7 @@ const Footer = () => {
           </div>
         </nav>
         <nav>
-          <h6 className="footer-title">Quick View</h6>
+          <h6 className="footer-title md:mt-16">Quick View</h6>
 
           <div className="flex gap-2 ">
             <FontAwesomeIcon icon={faCircleCheck} />

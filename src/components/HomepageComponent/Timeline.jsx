@@ -13,104 +13,69 @@ const items = [
 const TimelineItem = ({ color, title, description, index }) => (
   <div className="flex items-start mb-8 relative">
     {/* Left Side 3 Dots */}
-    <div className="absolute -left-10 top-3 flex space-x-1">
+    <div className="absolute -left-9 top-4 hidden md:flex space-x-1">
       {[...Array(3)].map((_, i) => (
         <div key={i} className="w-1.5 h-1.5 bg-gray-400 rounded-full"></div>
       ))}
     </div>
 
     {/* Center "SSL" Circle */}
-    <div className="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-gray-100 border border-blue-500 rounded-full text-xs font-semibold text-gray-600 shadow-md">
+    <div className="flex-shrink-0 w-8 h-8 md:w-10 md:h-10 flex items-center justify-center bg-gray-100 border border-blue-500 rounded-full text-xs font-semibold text-gray-600 shadow-md">
       SSL
     </div>
 
     {/* Item Content with Number, Title, and Description */}
-    <div className="ml-6">
+    <div className="ml-4 md:ml-6">
       <div className="flex items-center">
-        <div className={`w-6 h-6 rounded-full ${color} flex items-center justify-center text-xs font-bold text-white`}>
+        <div className={`w-5 h-5 md:w-6 md:h-6 rounded-full ${color} flex items-center justify-center text-xs font-bold text-white`}>
           {String(index + 1).padStart(2, '0')}
         </div>
-        <h3 className="ml-2 text-lg font-semibold text-gray-700">{title}</h3>
+        <h3 className="ml-2 text-sm md:text-lg font-semibold text-gray-700">{title}</h3>
       </div>
-      <p className="text-gray-600 mt-2 ml-8">{description}</p>
+      <p className="text-gray-600 mt-2 ml-6 md:ml-8 text-sm md:text-base">{description}</p>
     </div>
   </div>
 );
 
 const Timeline = () => (
- <div>
-     <h2 className="relative text-center text-4xl mt-5 font-semibold text-blue-600 mb-12 pb-3">
-  Our Concept
-  <span className="absolute left-1/2 transform -translate-x-1/2 bottom-0 w-[13%] h-1 bg-blue-600"></span>
-</h2>
+  <div className="px-4 md:px-0">
+    <h2 className="relative text-center text-2xl md:text-4xl mt-5 font-semibold text-blue-600 mb-8 md:mb-12 pb-3">
+      Our Concept
+      <span className="absolute left-1/2 transform -translate-x-1/2 bottom-0 w-16 md:w-[13%] h-1 bg-blue-600"></span>
+    </h2>
 
-         <div className="max-w-xl mx-auto py-16 relative left-[14%]">
+    <div className="max-w-2xl md:max-w-xl mx-auto py-8 md:py-16 relative md:ml-[45%]">
 
-    {/* Left Vertical Line */}
-    <div className="absolute left-10 top-20 bottom-0 border-l-2 border-gray-300 h-[76%]"></div>
-    <div className="absolute left-[30px] top-[6%] flex space-x-1">
-      {[...Array(1)].map((_, i) => (
-        <div key={i} className="w-5 h-5 bg-gray-400 rounded-full"></div>
-      ))}
-    </div>
-    <div className="absolute left-[30px] top-[20%] flex space-x-1">
-      {[...Array(1)].map((_, i) => (
-        <div key={i} className="w-5 h-5 bg-gray-400 rounded-full"></div>
-      ))}
-    </div>
-    <div className="absolute left-[30px] top-[30%] flex space-x-1">
-      {[...Array(1)].map((_, i) => (
-        <div key={i} className="w-5 h-5 bg-gray-400 rounded-full"></div>
-      ))}
-    </div>
-    <div className="absolute left-[30px] top-[41.5%] flex space-x-1">
-      {[...Array(1)].map((_, i) => (
-        <div key={i} className="w-5 h-5 bg-gray-400 rounded-full"></div>
-      ))}
-    </div>
-    <div className="absolute left-[30px] top-[55.4%] flex space-x-1">
-      {[...Array(1)].map((_, i) => (
-        <div key={i} className="w-5 h-5 bg-gray-400 rounded-full"></div>
-      ))}
-    </div>
-    <div className="absolute left-[30px] top-[69.3%] flex space-x-1">
-      {[...Array(1)].map((_, i) => (
-        <div key={i} className="w-5 h-5 bg-gray-400 rounded-full"></div>
-      ))}
-    </div>
-    <div className="absolute left-[30px] top-[81.5%] flex space-x-1">
-      {[...Array(1)].map((_, i) => (
-        <div key={i} className="w-5 h-5 bg-gray-400 rounded-full"></div>
-      ))}
-    </div>
+      {/* Left Vertical Line */}
+      <div className="absolute left-6 md:left-10 top-16 md:top-[6%] bottom-0 border-l-2 border-gray-300 h-[76%]"></div>
 
-    {/* Left "SSL" Circle with Gradient Border */}
-    <div className="absolute -left-[20%] top-[50%]  w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 font-semibold text-sm shadow-md"
-      style={{ border: '3px solid', borderRadius:'100%', borderImage: 'linear-gradient(to right, red, blue, yellow) 1' }}>
-      SSL
-       {/* Left 4 Dots */}
-    <div className="absolute left-20 flex space-x-1">
-      {[...Array(4)].map((_, i) => (
-        <div key={i} className="w-1.5 h-1.5 bg-gray-400 rounded-full"></div>
+      {/* Dot Markers on the Vertical Line */}
+      {[8.2, 20, 30, 41.5, 55.4, 69.3, 81.5].map((top, i) => (
+        <div key={i} className={`absolute left-6 md:left-[30px] top-[${top}%] flex space-x-1`}>
+          <div className="w-4 h-4 md:w-5 md:h-5 bg-gray-400 rounded-full"></div>
+        </div>
       ))}
-    </div>
-    </div>
 
-   
+      {/* Left "SSL" Circle with Gradient Border */}
+      <div className="absolute md:-left-[20%] md:top-[50%] top-0 left-[15%] w-12 h-12 md:w-16 md:h-16 rounded-full  flex items-center justify-center text-gray-600 font-semibold text-xs md:text-sm "
+        style={{ border: '3px solid', borderRadius:'100%', borderImage: 'linear-gradient(to right, red, blue, yellow) 1' }}>
+        SSL
+      </div>
 
-    <div className="pl-32 pr-16">
-      {items.map((item, index) => (
-        <TimelineItem
-          key={index}
-          color={item.color}
-          title={item.title}
-          description={item.description}
-          index={index}
-        />
-      ))}
+      {/* Timeline Items */}
+      <div className="md:pl-32 pl-20 md:pr-16 mt-12 md:mt-0">
+        {items.map((item, index) => (
+          <TimelineItem
+            key={index}
+            color={item.color}
+            title={item.title}
+            description={item.description}
+            index={index}
+          />
+        ))}
+      </div>
     </div>
   </div>
- </div>
 );
 
 export default Timeline;

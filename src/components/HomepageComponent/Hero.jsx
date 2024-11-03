@@ -19,9 +19,8 @@ const Hero = () => {
     'https://i.ibb.co.com/CvJhRY6/iso-14001.png',
   ];
   const [currentImage, setCurrentImage] = useState(0);
-  const [playCount, setPlayCount] = useState(0); // State to track play count
+  const [playCount, setPlayCount] = useState(0);
 
-  // This function is triggered when the video ends
   const handleVideoEnded = () => {
     setPlayCount((prevCount) => prevCount + 1);
   };
@@ -29,7 +28,7 @@ const Hero = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImage((prevIndex) => (prevIndex + 1) % images.length);
-    }, 2000); // Change image every 2 seconds
+    }, 2000);
     return () => clearInterval(interval);
   }, [images.length]);
 
@@ -39,8 +38,8 @@ const Hero = () => {
         autoPlay
         loop
         className="absolute w-full h-full object-cover"
-        onEnded={handleVideoEnded} // Call function when video ends
-        playsInline // For mobile browsers
+        onEnded={handleVideoEnded}
+        playsInline
       >
         <source src={videoSrc} type="video/mp4" />
         Your browser does not support the video tag.
@@ -59,11 +58,9 @@ const Hero = () => {
         <img src={images[currentImage]} alt="Partner" className="w-full h-full object-cover" />
       </div>
 
-      {/* Optionally display a message or take action after 5 plays */}
-      {playCount >= 50000 && (
+      {playCount >= 5 && (
         <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-white">
           <p>The video has played 5 times.</p>
-          {/* You can choose to hide the video, mute it, or take any action here */}
         </div>
       )}
     </section>
