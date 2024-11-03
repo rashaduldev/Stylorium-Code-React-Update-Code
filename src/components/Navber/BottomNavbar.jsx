@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { CiMenuFries } from 'react-icons/ci';
+import { NavLink } from 'react-router-dom';
 
 // eslint-disable-next-line react/prop-types
 const BottomNavbar = ({ isHidden }) => {
@@ -13,10 +14,12 @@ const BottomNavbar = ({ isHidden }) => {
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         {/* Logo */}
-        <div >
-          <img className="w-16 h-14 ml-10"   src="https://i.ibb.co.com/n8mynVc/logo.jpg" alt="" />
-        <p className='text-sm italic pt-1 font-bold'>100% ExportOriented</p>
+        <NavLink to={'/'}>
+        <div>
+          <img className="w-16 h-14 ml-10" src="https://i.ibb.co.com/n8mynVc/logo.jpg" alt="Logo" />
+          <p className="text-sm italic pt-1 font-bold">100% Export Oriented</p>
         </div>
+        </NavLink>
         
         {/* Menu Icon and Navigation Links */}
         <div className="md:hidden">

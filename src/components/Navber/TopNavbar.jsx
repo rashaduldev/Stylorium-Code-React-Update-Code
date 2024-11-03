@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import { CiMenuFries } from 'react-icons/ci';
 
 // eslint-disable-next-line react/prop-types
@@ -13,13 +14,14 @@ const TopNavbar = ({ isVisible }) => {
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         {/* Logo */}
-        <div >
-          <img className="w-16 h-14 ml-10"   src="https://i.ibb.co.com/n8mynVc/logo.jpg" alt="" />
-        <p className='text-sm italic pt-1 font-bold'>100% ExportOriented</p>
+        <NavLink to={'/'}>
+        <div>
+          <img className="w-16 h-14 ml-10" src="https://i.ibb.co.com/n8mynVc/logo.jpg" alt="Logo" />
+          <p className="text-sm italic pt-1 font-bold">100% Export Oriented</p>
         </div>
-        
-        
-        {/* Menu Icon and Navigation Links */}
+        </NavLink>
+
+        {/* Menu Icon */}
         <div className="md:hidden">
           <CiMenuFries
             size={24}
@@ -28,29 +30,174 @@ const TopNavbar = ({ isVisible }) => {
           />
         </div>
 
-        <ul className={`md:flex space-x-6 hidden ${isMobileMenuOpen ? 'block' : 'hidden'} md:block`}>
-          <li>HOME</li>
-          <li>OUR COMPANY</li>
-          <li>OUR SERVICE</li>
-          <li>GALLERY</li>
-          <li>QUALITY</li>
-          <li>CAREER</li>
-          <li>CONTACT</li>
-          <li>FAQ</li>
+        {/* Static Navigation Links */}
+        <ul className="md:flex space-x-6 hidden md:block">
+          <li>
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive ? 'text-blue-600 underline' : 'text-gray-800 hover:text-blue-600'
+              }
+            >
+              HOME
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/our-company"
+              className={({ isActive }) =>
+                isActive ? 'text-blue-600 underline' : 'text-gray-800 hover:text-blue-600'
+              }
+            >
+              OUR COMPANY
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/our-service"
+              className={({ isActive }) =>
+                isActive ? 'text-blue-600 underline' : 'text-gray-800 hover:text-blue-600'
+              }
+            >
+              OUR SERVICE
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/gallery"
+              className={({ isActive }) =>
+                isActive ? 'text-blue-600 underline' : 'text-gray-800 hover:text-blue-600'
+              }
+            >
+              GALLERY
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/aboutus"
+              className={({ isActive }) =>
+                isActive ? 'text-blue-600 underline' : 'text-gray-800 hover:text-blue-600'
+              }
+            >
+              ABOUT US
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/career"
+              className={({ isActive }) =>
+                isActive ? 'text-blue-600 underline' : 'text-gray-800 hover:text-blue-600'
+              }
+            >
+              CAREER
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/contact"
+              className={({ isActive }) =>
+                isActive ? 'text-blue-600 underline' : 'text-gray-800 hover:text-blue-600'
+              }
+            >
+              CONTACT
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/faq"
+              className={({ isActive }) =>
+                isActive ? 'text-blue-600 underline' : 'text-gray-800 hover:text-blue-600'
+              }
+            >
+              FAQ
+            </NavLink>
+          </li>
         </ul>
       </div>
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <ul className="flex flex-col items-start bg-white p-4 space-y-2 text-gray-800 md:hidden">
-          <li>HOME</li>
-          <li>OUR COMPANY</li>
-          <li>OUR SERVICE</li>
-          <li>GALLERY</li>
-          <li>QUALITY</li>
-          <li>CAREER</li>
-          <li>CONTACT</li>
-          <li>FAQ</li>
+          <li>
+            <NavLink
+              to="/home"
+              className={({ isActive }) =>
+                isActive ? 'text-blue-600 underline' : 'text-gray-800 hover:text-blue-600'
+              }
+            >
+              HOME
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/our-company"
+              className={({ isActive }) =>
+                isActive ? 'text-blue-600 underline' : 'text-gray-800 hover:text-blue-600'
+              }
+            >
+              OUR COMPANY
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/our-service"
+              className={({ isActive }) =>
+                isActive ? 'text-blue-600 underline' : 'text-gray-800 hover:text-blue-600'
+              }
+            >
+              OUR SERVICE
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/gallery"
+              className={({ isActive }) =>
+                isActive ? 'text-blue-600 underline' : 'text-gray-800 hover:text-blue-600'
+              }
+            >
+              GALLERY
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/aboutus"
+              className={({ isActive }) =>
+                isActive ? 'text-blue-600 underline' : 'text-gray-800 hover:text-blue-600'
+              }
+            >
+              ABOUT US
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/career"
+              className={({ isActive }) =>
+                isActive ? 'text-blue-600 underline' : 'text-gray-800 hover:text-blue-600'
+              }
+            >
+              CAREER
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/contact"
+              className={({ isActive }) =>
+                isActive ? 'text-blue-600 underline' : 'text-gray-800 hover:text-blue-600'
+              }
+            >
+              CONTACT
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/faq"
+              className={({ isActive }) =>
+                isActive ? 'text-blue-600 underline' : 'text-gray-800 hover:text-blue-600'
+              }
+            >
+              FAQ
+            </NavLink>
+          </li>
         </ul>
       )}
     </nav>
