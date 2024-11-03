@@ -54,12 +54,12 @@ const TopNavbar = ({ isVisible }) => {
           </li>
           <li>
             <NavLink
-              to="/our-service"
+              to="/ourproducts"
               className={({ isActive }) =>
                 isActive ? 'text-blue-600 underline' : 'text-gray-800 hover:text-blue-600'
               }
             >
-              OUR SERVICE
+              OUR Products
             </NavLink>
           </li>
           <li>
@@ -140,12 +140,12 @@ const TopNavbar = ({ isVisible }) => {
           </li>
           <li>
             <NavLink
-              to="/our-service"
+              to="/ourproducts"
               className={({ isActive }) =>
                 isActive ? 'text-blue-600 underline' : 'text-gray-800 hover:text-blue-600'
               }
             >
-              OUR SERVICE
+              OUR PRODUCT
             </NavLink>
           </li>
           <li>
