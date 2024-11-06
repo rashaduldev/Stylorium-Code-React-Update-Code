@@ -35,7 +35,7 @@ const Nav = ({ isVisible }) => {
           {['HOME', 'OUR COMPANY', 'OUR SERVICE', 'GALLERY', 'ABOUTUS', 'CAREER', 'CONTACT', 'FAQ'].map((link) => (
             <li key={link}>
               <NavLink
-                to={`/${link.toLowerCase().replace(/ /g, '-')}`}
+                to={link === 'HOME' ? '/' : `/${link.toLowerCase().replace(/ /g, '-')}`}
                 className={({ isActive }) =>
                   isActive ? 'text-blue-600 underline' : 'text-gray-800 hover:text-blue-600'
                 }
@@ -53,7 +53,7 @@ const Nav = ({ isVisible }) => {
           {['HOME', 'OUR COMPANY', 'OUR SERVICE', 'GALLERY', 'ABOUTUS', 'CAREER', 'CONTACT', 'FAQ'].map((link) => (
             <li key={link}>
               <NavLink
-                to={`/${link.toLowerCase().replace(/ /g, '-')}`}
+                to={link === 'HOME' ? '/' : `/${link.toLowerCase().replace(/ /g, '-')}`}
                 className={({ isActive }) =>
                   isActive ? 'text-blue-600 underline' : 'text-gray-800 hover:text-blue-600'
                 }
