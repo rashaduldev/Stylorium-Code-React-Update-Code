@@ -1,10 +1,15 @@
 import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
 import { CiMenuFries } from 'react-icons/ci';
+import { NavLink } from 'react-router-dom';
 
 // eslint-disable-next-line react/prop-types
 const TopNavbar = ({ isVisible }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isOurCompanyOpen, setIsOurCompanyOpen] = useState(false); 
+
+  const handleOurCompanyClick = () => {
+    setIsOurCompanyOpen(!isOurCompanyOpen); // Toggle the dropdown on click
+  };
 
   return (
     <nav
@@ -15,10 +20,10 @@ const TopNavbar = ({ isVisible }) => {
       <div className="container mx-auto px-4 flex justify-between items-center">
         {/* Logo */}
         <NavLink to={'/'}>
-        <div>
-          <img className="w-16 h-14 ml-10" src="https://i.ibb.co.com/n8mynVc/logo.jpg" alt="Logo" />
-          <p className="text-sm italic pt-1 font-bold">100% Export Oriented</p>
-        </div>
+          <div>
+            <img className="w-16 h-14 ml-10" src="https://i.ibb.co.com/n8mynVc/logo.jpg" alt="Logo" />
+            <p className="text-sm italic pt-1 font-bold">100% Export Oriented</p>
+          </div>
         </NavLink>
 
         {/* Menu Icon */}
@@ -31,7 +36,7 @@ const TopNavbar = ({ isVisible }) => {
         </div>
 
         {/* Static Navigation Links */}
-        <ul className="md:flex space-x-6 hidden md:block">
+        <ul className={`md:flex space-x-6 hidden md:block ${isMobileMenuOpen ? 'block' : 'hidden'} md:block text-gray-800`}>
           <li>
             <NavLink
               to="/"
@@ -42,15 +47,43 @@ const TopNavbar = ({ isVisible }) => {
               HOME
             </NavLink>
           </li>
-          <li>
-            <NavLink
-              to="/our-company"
-              className={({ isActive }) =>
-                isActive ? 'text-blue-600 underline' : 'text-gray-800 hover:text-blue-600'
-              }
+          <li className="relative">
+            <button
+              onClick={handleOurCompanyClick} // Toggle on click
+              className="text-gray-800 hover:text-blue-600"
             >
               OUR COMPANY
-            </NavLink>
+            </button>
+            {/* Dropdown Menu */}
+            {isOurCompanyOpen && (
+              <ul className="absolute left-0 mt-2 bg-white shadow-md rounded-lg p-2 space-y-2 text-gray-800 w-full">
+                
+                <li className="border-b border-gray-800 w-full p-2">
+                  <NavLink
+                    to="/our-company/mission"
+                    className={({ isActive }) => (isActive ? 'text-blue-600 underline' : 'text-gray-800 hover:text-blue-600')}
+                  >
+                    Mission
+                  </NavLink>
+                </li>
+                <li className="border-b border-gray-800 w-full p-2">
+                  <NavLink
+                    to="/our-company/organogram"
+                    className={({ isActive }) => (isActive ? 'text-blue-600 underline' : 'text-gray-800 hover:text-blue-600')}
+                  >
+                    Organogram
+                  </NavLink>
+                </li>
+                <li className="border-b border-gray-800 w-full p-2">
+                  <NavLink
+                    to="/our-company/md"
+                    className={({ isActive }) => (isActive ? 'text-blue-600 underline' : 'text-gray-800 hover:text-blue-600')}
+                  >
+                   OUR MD
+                  </NavLink>
+                </li>
+              </ul>
+            )}
           </li>
           <li>
             <NavLink
@@ -120,7 +153,7 @@ const TopNavbar = ({ isVisible }) => {
         <ul className="flex flex-col items-start bg-white p-4 space-y-2 text-gray-800 md:hidden">
           <li>
             <NavLink
-              to="/home"
+              to="/"
               className={({ isActive }) =>
                 isActive ? 'text-blue-600 underline' : 'text-gray-800 hover:text-blue-600'
               }
@@ -128,15 +161,43 @@ const TopNavbar = ({ isVisible }) => {
               HOME
             </NavLink>
           </li>
-          <li>
-            <NavLink
-              to="/our-company"
-              className={({ isActive }) =>
-                isActive ? 'text-blue-600 underline' : 'text-gray-800 hover:text-blue-600'
-              }
+          <li className="relative">
+            <button
+              onClick={handleOurCompanyClick} // Toggle on click
+              className="text-gray-800 hover:text-blue-600"
             >
               OUR COMPANY
-            </NavLink>
+            </button>
+            {/* Dropdown Menu */}
+            {isOurCompanyOpen && (
+              <ul className="absolute left-0 mt-2 bg-white shadow-md rounded-lg p-2 space-y-2 text-gray-800 w-full">
+                
+                <li className="border-b border-gray-800 w-full p-2">
+                  <NavLink
+                    to="/our-company/mission"
+                    className={({ isActive }) => (isActive ? 'text-blue-600 underline' : 'text-gray-800 hover:text-blue-600')}
+                  >
+                    Mission
+                  </NavLink>
+                </li>
+                <li className="border-b border-gray-800 w-full p-2">
+                  <NavLink
+                    to="/our-company/organogram"
+                    className={({ isActive }) => (isActive ? 'text-blue-600 underline' : 'text-gray-800 hover:text-blue-600')}
+                  >
+                    Organogram
+                  </NavLink>
+                </li>
+                <li className="border-b border-gray-800 w-full p-2">
+                  <NavLink
+                    to="/our-company/md"
+                    className={({ isActive }) => (isActive ? 'text-blue-600 underline' : 'text-gray-800 hover:text-blue-600')}
+                  >
+                   OUR MD
+                  </NavLink>
+                </li>
+              </ul>
+            )}
           </li>
           <li>
             <NavLink
@@ -145,7 +206,7 @@ const TopNavbar = ({ isVisible }) => {
                 isActive ? 'text-blue-600 underline' : 'text-gray-800 hover:text-blue-600'
               }
             >
-              OUR PRODUCT
+              OUR Product
             </NavLink>
           </li>
           <li>
