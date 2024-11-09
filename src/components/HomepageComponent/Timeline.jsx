@@ -1,3 +1,4 @@
+import { FaRegCircle } from "react-icons/fa";
 
 const items = [
   { color: 'bg-red-500', title: 'ETHICS', description: 'We are working constructively to influence proposed laws and regulations. Also follow corporate guideline and rules of foreign principle.' },
@@ -47,23 +48,61 @@ const Timeline = () => (
     <div className="max-w-2xl md:max-w-xl mx-auto py-8 md:py-16 relative md:ml-[45%]">
 
       {/* Left Vertical Line */}
-      <div className="absolute left-6 md:left-10 top-16 md:top-[6%] bottom-0 border-l-2 border-gray-300 h-[76%]"></div>
+      <div className="absolute left-6 md:left-10 top-16 md:top-[7%] bottom-0 border-l-2 border-gray-300 h-[76%]"></div>
 
       {/* Dot Markers on the Vertical Line */}
-      {[8.2, 20, 30, 41.5, 55.4, 69.3, 81.5].map((top, i) => (
-        <div key={i} className={`absolute left-6 md:left-[30px] top-[${top}%] flex space-x-1`}>
-          <div className="w-4 h-4 md:w-5 md:h-5 bg-gray-400 rounded-full"></div>
+      {[6.8, 21.2, 31.4, 44, 56.2, 70.6, 82.9].map((top, i) => (
+        <div
+          key={i}
+          className="absolute left-6 md:left-[33px] flex space-x-1"
+          style={{ top: `${top}%` }}
+        >
+          <div className="w-4 h-4 md:w-5 md:h-5 rounded-full bg-white"><FaRegCircle /></div>
         </div>
       ))}
 
-      {/* Left "SSL" Circle with Gradient Border */}
-      <div className="absolute md:-left-[20%] md:top-[50%] top-0 left-[15%] w-12 h-12 md:w-16 md:h-16 rounded-full  flex items-center justify-center text-gray-600 font-semibold text-xs md:text-sm "
-        style={{ border: '3px solid', borderRadius:'100%', borderImage: 'linear-gradient(to right, red, blue, yellow) 1' }}>
+    {/* Left "SSL" Circle with Gradient Border */}
+      {/* <div
+        className="absolute md:-left-[20%] md:top-[50%] top-0 left-[15%] w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center text-gray-600 font-semibold text-xs md:text-sm"
+        style={{
+          border: '3px solid',
+          borderRadius:'100%',
+          borderImage: 'linear-gradient(to right, red, blue, yellow) 1',
+        }}
+      >
         SSL
+      </div> */}
+      <div className="absolute md:-left-[25%] md:top-[47%] top-0 left-[15%]">
+      <div className="flex items-center space-x-4">
+      {/* SSL Circle with Gradient Border */}
+      <div
+        className="flex items-center justify-center w-20 h-20 rounded-full"
+        style={{
+          background: 'conic-gradient(blue, red, gray, yellow)', // Segmented gradient border
+          padding: '4px',
+        }}
+      >
+        {/* Inner circle for SSL text */}
+        <div className="flex items-center justify-center w-16 h-16 bg-white rounded-full text-[#4E5793] font-bold text-sm">
+          SSL
+        </div>
       </div>
 
+      {/* Horizontal Dots */}
+      <div className="flex space-x-2">
+        {Array.from({ length: 4 }).map((_, index) => (
+          <span
+            key={index}
+            className="w-2 h-2 bg-gray-400 rounded-full"
+          ></span>
+        ))}
+      </div>
+       </div>
+      </div>
+
+
       {/* Timeline Items */}
-      <div className="md:pl-32 pl-20 md:pr-16 mt-12 md:mt-0">
+      <div className="md:pl-[88px] pl-20 md:pr-16 mt-12 md:mt-0">
         {items.map((item, index) => (
           <TimelineItem
             key={index}

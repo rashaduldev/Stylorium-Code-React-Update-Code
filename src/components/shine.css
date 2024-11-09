@@ -1,0 +1,56 @@
+/* Base styling */
+.shine-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .shine-container {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .h666 {
+    color: hsl(0, 0%, 28%);
+    font-size: 50px;
+    font-weight: bold;
+    font-family: monospace;
+    letter-spacing: 7px;
+    cursor: pointer;
+    text-transform: uppercase;
+    padding: 20px;
+    background: linear-gradient(
+      to left,
+      #ffffff 0%,     /* Darker gray start */
+      #ffffff 25%,    /* Medium gray */
+      #cccccc 50%,    /* Light gray */
+      #4E5898 75%,    /* Medium gray */
+      #ffffff 100%    /* Darker gray end */
+    );
+    background-size: 200%; /* Allows animation to cover full width */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s infinite linear;
+  }
+  
+  .description {
+    font-size: 1.25rem;
+    color: white;
+    margin-top: 1rem;
+  }
+  
+  @keyframes shine {
+    0% {
+      background-position: 0;
+    }
+    100% {
+      background-position: 200%;
+    }
+  }
+  

@@ -1,8 +1,11 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import vedio1 from '../../assets/video/Why_choose_SSL.mp4';
 
 const BottomCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [dragOffset, setDragOffset] = useState(0);
 
   const cards = [
     { id: 1, label: 'Global Organic Textile Standard', imgSrc: 'https://i.ibb.co.com/NSM5Bks/Valus1.png' },
@@ -16,6 +19,7 @@ const BottomCarousel = () => {
   ];
 
   const cardsToShow = 4;
+  const containerRef = useRef(null);
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) =>
@@ -29,8 +33,31 @@ const BottomCarousel = () => {
     );
   };
 
+
+  const handleMouseDown = (e) => {
+    setIsDragging(true);
+    setStartX(e.clientX);
+  };
+
+  const handleMouseMove = (e) => {
+    if (isDragging) {
+      const moveOffset = e.clientX - startX;
+      setDragOffset(moveOffset);
+    }
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+    if (dragOffset > 50) {
+      prevSlide();
+    } else if (dragOffset < -50) {
+      nextSlide();
+    }
+    setDragOffset(0);
+  };
+
   return (
-    <div className="relative h-[750px] my-8">
+    <div className="relative h-[650px] my-8">
       <video
         className="absolute inset-0 w-full h-full object-cover"
         src={vedio1}
@@ -40,12 +67,19 @@ const BottomCarousel = () => {
       />
       <div className="absolute inset-0 bg-black opacity-30"/>
       <div className="flex justify-center items-center h-full relative z-10">
-        <button onClick={prevSlide} className="absolute left-2 top-1/2 transform -translate-y-1/2 text-white bg-gray-700 p-2 rounded-full z-10">
+        <button onClick={prevSlide} className="absolute left-2 top-1/2 transform -translate-y-1/2 text-white text-5xl z-10">
           &lt;
         </button>
-        <div className="relative w-full overflow-hidden">
+        <div
+        ref={containerRef}
+        className="relative w-full overflow-hidden"
+        onMouseDown={handleMouseDown}
+        onMouseMove={handleMouseMove}
+        onMouseUp={handleMouseUp}
+        onMouseLeave={handleMouseUp}
+       >
           <div
-            className="flex transition-transform duration-300 gap-5"
+            className="flex transition-transform duration-300 gap-5 cursor-pointer"
             style={{ transform: `translateX(-${currentIndex * (100 / cardsToShow)}%)` }}
           >
             {cards.map((card) => (
@@ -60,7 +94,7 @@ const BottomCarousel = () => {
             ))}
           </div>
         </div>
-        <button onClick={nextSlide} className="absolute right-2 top-1/2 transform -translate-y-1/2 text-white bg-gray-700 p-2 rounded-full z-10">
+        <button onClick={nextSlide} className="absolute right-2 top-1/2 transform -translate-y-1/2 text-white text-5xl z-10">
           &gt;
         </button>
       </div>

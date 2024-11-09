@@ -53,3 +53,58 @@
     transform: translateY(-10px);
   }
 }
+.header-test h1 {
+  font-size: 66px;
+  line-height: 142px;
+  margin-left: -10px;
+  color: transparent;
+  -webkit-text-stroke: 1px #fff;
+  background: url(./assets/image/bgImage/back.png);
+  background-size: 200% 100%; /* Only stretch horizontally */
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-position: 0 0;
+  animation: back 10s linear 0.5s infinite forwards;
+}
+
+@keyframes back {
+  from {
+    background-position: 0% 0%;
+  }
+  to {
+    background-position: 100% 0%;
+  }
+}
+
+.header-test2 {
+  font-size: 16px;
+  line-height: 1.3;
+  width: 85%;
+  text-align: center;
+  display: inline-block;
+}
+
+@media screen and(max-width: 980px) {
+  .header-test2 {
+      margin: 0 0 10px;
+      font-size: 16px;
+      line-height: 1.3;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header-test2 {
+      position: absolute;
+      top: 17rem;
+      font-size: 12px;
+  }
+}
+
+@media (max-width: 425px) {
+  .header-test2 {
+      position: absolute;
+      top: 17rem;
+      font-size: 12px;
+      left: 5%;
+  }
+}

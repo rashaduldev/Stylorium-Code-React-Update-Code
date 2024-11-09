@@ -51,7 +51,28 @@ const router = createBrowserRouter([
       {
         path: "/our-company/mission",
         element: <MissionInfographic/>,
-      },{
+      },
+      {
+        path: "/our-company/md",
+        element: <Md/>,
+      },
+      {
+        path: "/gallery/women",
+        element: <Md/>,
+      },
+      {
+        path: "/our-company/md",
+        element: <Md/>,
+      },
+      {
+        path: "/our-company/md",
+        element: <Md/>,
+      },
+      {
+        path: "/our-company/md",
+        element: <Md/>,
+      },
+      {
         path: "/our-company/md",
         element: <Md/>,
       },
