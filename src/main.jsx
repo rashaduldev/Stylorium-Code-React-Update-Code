@@ -16,6 +16,7 @@ import Errorpage from './Pages/Errorpage';
 import Organogram from './Pages/Organogram';
 import MissionInfographic from './Pages/Mission';
 import Md from './Pages/Md';
+import CategoryDisplay from './Pages/CategoryDisplay';
 
 
 const router = createBrowserRouter([
@@ -57,24 +58,8 @@ const router = createBrowserRouter([
         element: <Md/>,
       },
       {
-        path: "/gallery/women",
-        element: <Md/>,
-      },
-      {
-        path: "/our-company/md",
-        element: <Md/>,
-      },
-      {
-        path: "/our-company/md",
-        element: <Md/>,
-      },
-      {
-        path: "/our-company/md",
-        element: <Md/>,
-      },
-      {
-        path: "/our-company/md",
-        element: <Md/>,
+        path: "/gallery/:category/:subcategory",
+        element: <CategoryDisplay/>,
       },
       {
         path: "/faq",

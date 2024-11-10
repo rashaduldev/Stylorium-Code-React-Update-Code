@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
-import videoSrc from '../../assets/video/garment_video.mp4'; // Import your video
-// import ShineText from '../ShineText';
+import videoSrc from '../../assets/video/garment_video.mp4';
 
 const Hero = () => {
   const images = [
@@ -38,6 +37,7 @@ const Hero = () => {
       <video
         autoPlay
         loop
+        muted
         className="absolute w-full h-full object-cover"
         onEnded={handleVideoEnded}
         playsInline
@@ -48,16 +48,15 @@ const Hero = () => {
 
       <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center text-center">
         <div>
-         <div className=''>
-         {/* <ShineText /> */}
-         <div className="header-test mt-5">
-                <h1>Stylorium Sourcing Ltd</h1>
-            </div>
-            <p className="text-white text-lg w-[80%] mx-auto">Stylorium Sourcing is a 100% export Oriented trader, exporter, importer & manufacturer integrated in high value textile & non <br />  textile product. Company started its journey since 2020 and established its WAY TOWARDS SUSTAINABILITY vision in
-                2030. Corporate office is located at Dhaka ,Bangladesh.
-            </p>
-         </div>
-         
+          <div className="header-test mt-5">
+            <h1>Stylorium Sourcing Ltd</h1>
+          </div>
+          <p className="text-white text-lg w-[80%] mx-auto">
+            Stylorium Sourcing is a 100% export Oriented trader, exporter, importer & manufacturer integrated in high value textile & non
+            <br />
+            textile product. Company started its journey since 2020 and established its WAY TOWARDS SUSTAINABILITY vision in
+            2030. Corporate office is located at Dhaka ,Bangladesh.
+          </p>
         </div>
       </div>
 

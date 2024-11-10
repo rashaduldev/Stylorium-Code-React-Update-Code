@@ -1,0 +1,99 @@
+{
+    "categories":[
+       {
+          "id": 1,
+          "category": "Women",
+          "subcategories": [
+             {
+                "name": "tops",
+                "images": [
+                   "https://img.drz.lazcdn.com/static/bd/p/7687941dd3325325a4ee037331a949be.jpg_720x720q80.jpg",
+                   "https://rang-bd.com/wp-content/uploads/2024/06/RWR-TPS-00091-2.webp",
+                   "https://m.media-amazon.com/images/I/51BifxnGWfL._AC_UY1100_.jpg",
+                   "https://i.ebayimg.com/thumbs/images/g/-pkAAOSwhnZnFvaw/s-l1200.jpg",
+                   "https://d129gwz7aecqjo.cloudfront.net/images/thumbs/0010165_mn-fashion-special-tops-for-women-t-391.webp",
+                   "https://i.ebayimg.com/thumbs/images/g/-bsAAOSwn5lmQRbc/s-l1200.jpg",
+                   "https://i.ebayimg.com/thumbs/images/g/dJcAAOSwWNRnAtLp/s-l1200.jpg"
+                ]
+             },
+             {
+                "name": "jens",
+                "images": [
+                   "https://assets.vogue.com/photos/663a8ccd4e94e0f33e265f23/3:4/w_748%2Cc_limit/BestJeans_Slides%2520(1)_0022_image7.jpg",
+                   "https://i5.walmartimages.com/asr/9f00f7f2-04c3-405b-9b07-9b12d09d9628.7b3b79cac9606a1e72413b7d1807fc84.jpeg",
+                   "https://tailoredathlete.co.uk/cdn/shop/files/TA-WOMENS-28-04-23375461_1200x.jpg?v=1688654954",
+                   "https://cdna.lystit.com/520/650/n/photos/riverisland/efe498ff/river-island-Blue-Relaxed-Straight-Fit-Jeans.jpeg",
+                   "https://cdn.shopify.com/s/files/1/0030/5538/6688/products/12155K_P509DKBLU-alt3.jpg?v=1696901366"
+                ]
+             },
+             {
+                "name": "nightwear",
+                "images": [
+                   "https://example.com/women/nightwear1.jpg",
+                   "https://example.com/women/nightwear2.jpg",
+                   "https://example.com/women/nightwear3.jpg",
+                   "https://example.com/women/nightwear4.jpg",
+                   "https://example.com/women/nightwear5.jpg"
+                ]
+             },
+             {
+                "name": "footwear",
+                "images": [
+                   "https://example.com/women/footwear1.jpg",
+                   "https://example.com/women/footwear2.jpg",
+                   "https://example.com/women/footwear3.jpg",
+                   "https://example.com/women/footwear4.jpg",
+                   "https://example.com/women/footwear5.jpg"
+                ]
+             }
+          ]
+       },
+       {
+          "id": 2,
+          "category": "Men",
+          "subcategories": [
+             {
+                "name": "tops",
+                "images": [
+                   "https://example.com/men/tops1.jpg",
+                   "https://example.com/men/tops2.jpg",
+                   "https://example.com/men/tops3.jpg",
+                   "https://example.com/men/tops4.jpg",
+                   "https://example.com/men/tops5.jpg"
+                ]
+             },
+             {
+                "name": "jackets",
+                "images": [
+                   "https://example.com/men/jackets1.jpg",
+                   "https://example.com/men/jackets2.jpg",
+                   "https://example.com/men/jackets3.jpg",
+                   "https://example.com/men/jackets4.jpg",
+                   "https://example.com/men/jackets5.jpg"
+                ]
+             },
+             {
+                "name": "nightwear",
+                "images": [
+                   "https://example.com/men/nightwear1.jpg",
+                   "https://example.com/men/nightwear2.jpg",
+                   "https://example.com/men/nightwear3.jpg",
+                   "https://example.com/men/nightwear4.jpg",
+                   "https://example.com/men/nightwear5.jpg"
+                ]
+             },
+             {
+                "name": "footwear",
+                "images": [
+                   "https://example.com/men/footwear1.jpg",
+                   "https://example.com/men/footwear2.jpg",
+                   "https://example.com/men/footwear3.jpg",
+                   "https://example.com/men/footwear4.jpg",
+                   "https://example.com/men/footwear5.jpg"
+                ]
+             }
+          ]
+       }
+    ]
+ }
+ 
