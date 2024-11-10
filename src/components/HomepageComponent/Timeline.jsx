@@ -42,24 +42,25 @@ const Timeline = () => (
   <div className="px-4 md:px-0">
     <h2 className="relative text-center text-2xl md:text-4xl mt-5 font-semibold text-blue-600 mb-8 md:mb-12 pb-3">
       Our Concept
-      <span className="absolute left-1/2 transform -translate-x-1/2 bottom-0 w-16 md:w-[13%] h-1 bg-blue-600"></span>
+      <span className="absolute left-1/2 transform -translate-x-1/2 bottom-0 w-16 md:w-[13%] h-1 bg-blue-600"/>
     </h2>
 
     <div className="max-w-2xl md:max-w-xl mx-auto py-8 md:py-16 relative md:ml-[45%]">
 
       {/* Left Vertical Line */}
-      <div className="absolute left-6 md:left-10 top-16 md:top-[7%] bottom-0 border-l-2 border-gray-300 h-[76%]"></div>
+      <div className="absolute left-6 md:left-10 top-16 md:top-[7%] bottom-0 border-l-2 border-gray-300 h-[76%]"/>
 
-      {/* Dot Markers on the Vertical Line */}
-      {[6.8, 21.2, 31.4, 44, 56.2, 70.6, 82.9].map((top, i) => (
-        <div
-          key={i}
-          className="absolute left-6 md:left-[33px] flex space-x-1"
-          style={{ top: `${top}%` }}
-        >
-          <div className="w-4 h-4 md:w-5 md:h-5 rounded-full bg-white"><FaRegCircle /></div>
-        </div>
-      ))}
+   {/* Dot Markers on the Vertical Line */}
+{[6.8, 21.2, 31.4, 44, 56.2, 70.6, 82.9].map((top, i) => (
+  <div
+    key={i}
+    className="absolute left-6 md:left-[33px] flex space-x-1"
+    style={{ top: `${top}%` }}
+  >
+    <FaRegCircle className="text-gray-500 bg-white rounded-full w-4 h-4 md:w-5 md:h-5" />
+  </div>
+))}
+
 
     {/* Left "SSL" Circle with Gradient Border */}
       {/* <div

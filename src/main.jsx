@@ -14,9 +14,10 @@ import ContactPage from './Pages/Contact';
 import ProductGallery from './Pages/ProductGellary';
 import Errorpage from './Pages/Errorpage';
 import Organogram from './Pages/Organogram';
-import MissionInfographic from './Pages/Mission';
+// import MissionInfographic from './Pages/Mission';
 import Md from './Pages/Md';
 import CategoryDisplay from './Pages/CategoryDisplay';
+import MissionVisionValues from './Pages/MissionVission';
 
 
 const router = createBrowserRouter([
@@ -51,7 +52,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/our-company/mission",
-        element: <MissionInfographic/>,
+        element: <MissionVisionValues/>,
       },
       {
         path: "/our-company/md",

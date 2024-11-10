@@ -76,7 +76,7 @@ const Dashboard = () => {
             </div>
 
             {/* 2nd Div: Progress Bar Section */}
-          <div className='h-full flex-1 w-full'>
+          <div className='min-h-full flex-1 w-full'>
           <div className=" py-7 space-y-[37.4px] px-10 h-full bg-[#7E92BC] text-2xl">
                 {progressData.map((data, index) => (
                     <ProgressBar
