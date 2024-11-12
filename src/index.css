@@ -212,3 +212,55 @@ h1 {
 .faq.active .faq-toggle {
   background-color: #9fa4a8;
 }
+
+/* Par */
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 80vh;
+  /* Viewport height for a more responsive design */
+  background-color: #fff;
+  background-image: url("");
+  /* Add your image URL here */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  /* Center the background */
+  overflow: hidden;
+}
+/* Optional: Add media queries for additional responsiveness on smaller screens */
+
+@media only screen and (max-width: 1300px) {
+  #particles-js {
+      height: 80vh;
+      /* Reduce the height for smaller screens */
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #particles-js {
+      height: 60vh;
+      /* Reduce the height for smaller screens */
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #particles-js {
+      height: 50vh;
+      /* Further reduce height on very small screens */
+  }
+}
+.from-section {
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  margin: 50px auto;
+  max-width: 600px;
+  border-radius: 10px;
+  top: 55px;
+}
+canvas {
+  display: block;
+  vertical-align: bottom;
+}

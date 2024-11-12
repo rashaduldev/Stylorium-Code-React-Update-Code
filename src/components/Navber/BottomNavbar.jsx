@@ -9,7 +9,7 @@ const BottomNavbar = ({ isHidden }) => {
 
   return (
     <nav
-      className={`w-full bg-transparent py-4 z-10 transition-opacity duration-300 ${
+      className={`w-full bg-transparent py-4 bg-white transition-opacity duration-300 ${
         isHidden ? 'navbar-slide-up' : 'relative'
       }`}
     >

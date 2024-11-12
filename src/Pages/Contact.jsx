@@ -31,21 +31,21 @@ const ContactPage = () => {
         
         <div className="flex flex-col lg:flex-row gap-4 justify-center items-center">
           {/* Card 1 */}
-          <div className="bg-[#4D5891] text-white w-80 p-6 rounded-lg flex flex-col items-center h-[26vh]">
+          <div className="bg-[#4D5891] text-white w-80 p-6 rounded-lg flex flex-col items-center h-[20vh]">
             <span className="text-white text-3xl mb-4"><CiLocationOn /></span>
             <h4 className="font-bold text-lg">VISIT OUR OFFICE</h4>
             <p>AM Tower (Level-6), Plot# 25, Sonargaon Janapath Road Sector# 12, Uttara, Dhaka - 1230</p>
           </div>
           
           {/* Card 2 */}
-          <div className="bg-[#4D5891] text-white w-80 p-6 rounded-lg flex flex-col items-center h-[26vh]">
+          <div className="bg-[#4D5891] text-white w-80 p-6 rounded-lg flex flex-col items-center h-[20vh]">
             <span className="text-white text-3xl mb-4"><MdOutlineMailOutline /></span>
             <h4 className="font-bold text-lg">EMAIL US</h4>
             <p>info@stylorium.net</p>
           </div>
           
           {/* Card 3 */}
-          <div className="bg-[#4D5891] text-white w-80 p-6 rounded-lg flex flex-col items-center h-[26vh]">
+          <div className="bg-[#4D5891] text-white w-80 p-6 rounded-lg flex flex-col items-center h-[20vh]">
             <span className="text-white text-3xl mb-4"><FiPhone /></span>
             <h4 className="font-bold text-lg">CALL US</h4>
             <p>+880 1730595698</p>

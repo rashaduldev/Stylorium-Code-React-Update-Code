@@ -1,18 +1,19 @@
-
-
+import Particle from "./Perticle/Particle";
 
 const ContactForm = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="relative bg-white p-8 rounded-lg shadow-lg max-w-lg w-full overflow-hidden">
-        
-        {/* Particle Background Wrapper */}
-        <div className="particle-wrapper absolute inset-0">
-          {/* <Particle /> */}
+    <div className="min-h-screen flex items-center justify-center relative">
+      {/* Form Wrapper */}
+      <div className="relative p-8 rounded-lg shadow-lg max-w-lg w-full overflow-hidden z-10">
+        {/* Particle Background for the Input Fields */}
+        <div className="relative">
+          {/* Apply particle effect only to the height of 100px */}
+          <div className="absolute inset-0 -z-10 h-[100px]">
+            {/* <Particle /> Particle effect is applied here */}
+          </div>
         </div>
-        
+
         {/* Form Content */}
-        <h2 className="text-3xl font-bold text-center mb-6 z-10 relative">Get In Touch</h2>
         <form className="space-y-4 relative z-10">
           <div className="flex space-x-4">
             <input

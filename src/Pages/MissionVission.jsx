@@ -15,12 +15,12 @@ const MissionVisionValues = () => {
     <Nav isVisible={true}/>
      <div className="grid grid-cols-1 md:grid-cols-2 gap-0 p-8 container mx-auto mt-28">
       {/* Mission */}
-      <div className="bg-red-800 text-white p-6 flex flex-col justify-center">
-        <h2 className="text-2xl font-bold">OUR MISSION</h2>
-        <p className="mt-4 text-sm">
+      <div className="bg-orange-300 text-white p-6 flex flex-col justify-center">
+        <h2 className="text-3xl font-bold">OUR MISSION</h2>
+        <p className="mt-4 text-md">
           Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
-        <p className="mt-4 text-sm">
+        <p className="mt-4 text-md">
           Senectus urna vestibulum tincidunt turpis venenatis. Auctor tristique justo cras cubilia curabitur.
         </p>
       </div>
@@ -33,22 +33,22 @@ const MissionVisionValues = () => {
         <img src={images[1]} alt="Vision" className="w-full h-auto" />
       </div>
       <div className="bg-orange-600 text-white p-6 flex flex-col justify-center">
-        <h2 className="text-2xl font-bold">OUR VISION</h2>
-        <p className="mt-4 text-sm">
+        <h2 className="text-3xl font-bold">OUR VISION</h2>
+        <p className="mt-4 text-md">
           Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
-        <p className="mt-4 text-sm">
+        <p className="mt-4 text-md">
           Senectus urna vestibulum tincidunt turpis venenatis. Auctor tristique justo cras cubilia curabitur.
         </p>
       </div>
 
       {/* Values */}
       <div className="bg-teal-600 text-white p-6 flex flex-col justify-center">
-        <h2 className="text-2xl font-bold">OUR VALUES</h2>
-        <p className="mt-4 text-sm">
+        <h2 className="text-3xl font-bold">OUR VALUES</h2>
+        <p className="mt-4 text-md">
           Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
-        <p className="mt-4 text-sm">
+        <p className="mt-4 text-md">
           Senectus urna vestibulum tincidunt turpis venenatis. Auctor tristique justo cras cubilia curabitur.
         </p>
       </div>

@@ -32,14 +32,15 @@ const Homepage = () => {
       <Hero />
       {/* Pass isHidden to BottomNavbar to apply slide-up animation */}
       <BottomNavbar isHidden={showTopNavbar} />
-      <Dashboard/>
-      <Carousel/>
-      <Timeline/>
-      <VideoBackground/>
-      <CardGrid/>
-      <BottomCarousel/>
-      <WorldMap/>
-      <ContactForm/>
+      <Dashboard />
+      <Carousel />
+      <Timeline />
+      <VideoBackground />
+      <CardGrid />
+      <BottomCarousel />
+        <WorldMap />
+          <ContactForm />
+
     </>
   );
 };
